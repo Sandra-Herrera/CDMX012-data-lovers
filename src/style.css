@@ -1,0 +1,64 @@
+.displayInlineBlock{
+    display: inline-block;
+}
+.displayBlock{
+    display: block;
+}
+.marginBottom{
+    margin-bottom: 50px;
+}
+.marginTopPet{
+    margin-top: 30px;
+}
+.btnOrange{
+    border-radius: 20px;
+    background-color: #F6791E;
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+    font-family: Roboto;
+    width: 132px;
+    margin-bottom: 10px;
+    border: 0px;
+    box-shadow: 0px 5px 10px darkgrey;
+}
+.btnOrange:hover{
+    box-shadow: 0px 10px 10px darkgrey;
+    background-color:#f6671e;
+}
+.btnRegular{
+    border-radius: 7px;
+    background-color: #F4F3F2;
+    color: black;
+    font-weight: 600;
+    padding: 10px;
+    font-family: Roboto;
+    width: 130px;
+    border: 0px;
+    box-shadow: 2px 5px 10px darkgray;
+}
+.btnRegular:hover{
+    box-shadow: 0px 10px 10px darkgrey;
+    background-color: #c5daf7;
+}
+.positionAbsolute{
+    position:absolute;
+}
+.customWidth{
+    width: 80%;
+    margin-left: 50px;
+}
+.marginLeftSearch{
+    margin-left: 25%;
+}
+.btnSearch{
+    font-size: 100%;
+    font-family:Roboto;
+    border-radius: 7px;
+    width: 350px;
+}
+.btnCategories{
+    width: 20%;
+    height: 150px;
+    margin: 10px;
+}
