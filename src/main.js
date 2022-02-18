@@ -165,3 +165,4 @@ function cleanCode(){
         generalTable.removeChild(generalTable.firstChild);
     }
 }
+//Hola Ro y Sandy, aprendan rápido
