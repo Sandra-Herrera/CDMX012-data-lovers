@@ -15,7 +15,7 @@
  
 .background{
     background-image: url("img/screen.png");
-    background-size: 100vw 97vh;
+    background-size: 100vw 100vh;
     background-repeat: no-repeat;
 }
  
@@ -69,6 +69,12 @@
     margin-right: 30px;
     position: relative;  
 }
+
+.filterBtn:hover{
+    box-shadow: 0px 10px 10px darkgrey;
+    background-color: #c5daf7;
+}
+
 #searchBtn{
     width: 70px;
 }
@@ -77,10 +83,7 @@
     box-shadow: 0px 10px 10px darkgrey;
     background-color: #fce552;
 }
-.filterBtn:hover{
-    box-shadow: 0px 10px 10px darkgrey;
-    background-color: #c5daf7;
-}
+
 .positionAbsolute{
     position:absolute;
 }
@@ -89,19 +92,20 @@
     margin-left: 50px;
 }
  
- 
 .btnCategories{
     width: 20%;
     height: 150px;
     margin: 10px;
 }
 
-table {
-    
-    margin: 25px auto;
+table { 
+    width: min-content;
+    height: auto;
+    margin: 86px;
+    margin-top: 30px;
     border-collapse: collapse;
     border: 1px solid #eee;
-    border-bottom: 2px solid #00cccc;
+    border-bottom: 2px solid #68BB4F;
     box-shadow: 0px 0px 20px rgba(0,0,0,0.10),
        0px 10px 20px rgba(0,0,0,0.05),
        0px 20px 20px rgba(0,0,0,0.05),
@@ -110,17 +114,31 @@ table {
 tr:hover{
     background: #f4f4f4;
 }
-     th, td {
-       color: #999;
+     td {
+       /*color: #999;*/
+       font-size: 13px;
        border: 1px solid #eee;
        padding: 12px 35px;
        border-collapse: collapse;
      }
-     th {
-       background: #00cccc;
-       color: #fff;
+     
+     .thRio {
+       background: #68BB4F;
+       /*color: rgb(163, 15, 15);*/
+       text-align: center;
        text-transform: uppercase;
-       font-size: 12px;
-
+       font-size: 15px;
+       font-weight: bold;
+       color: #FFFFFF;
+       /*font-size: 12px;*/
+       border: 1px solid #eee;
+       padding: 12px 35px;
+       border-collapse: collapse;
      }
+
+    .scrollBar{
+        width: 975px; 
+        height: 400px;
+        overflow: auto;
+    }
   
