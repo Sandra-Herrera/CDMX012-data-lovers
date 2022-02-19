@@ -1,5 +1,5 @@
-export default function generatorTable(){
-  return` <table id="tbOlimpics">
+export default function generatorTable() {
+  return ` <table id="tbOlimpics">
             <thead>
               <tr class="thRio">
                 <td>DISCIPLINA</td>

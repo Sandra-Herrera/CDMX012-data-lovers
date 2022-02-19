@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>JUEGOS OLÍMPICOS RIO 2016</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-
-
   </head>
   <body class="background">
-    <header id=logo class="marginBottom" style="height:87px"> 
-      <div>
-      </div>
+    <header id="logo" class="marginBottom" style="height: 87px">
+      <div></div>
     </header>
-    <div class="displayInlineBlock" style="margin-left: 25px;">
-        <nav id="navVinicius">
-          <button class="displayBlock orangeBtn" id="btnGallery">GALERÍA</button>
-          <button class="displayBlock orangeBtn" id="btnHistory">HISTORIA</button>
-          <button class="displayBlock orangeBtn" id="btnDatos">DATOS CURIOSOS</button>
-        </nav>
-        <div class="marginTopPet">
-          <img width="200px" src="img/vinicius.png" alt="imgVinicius">
-        </div>
+    <div class="displayInlineBlock" style="margin-left: 25px">
+      <nav id="navVinicius">
+        <button class="displayBlock orangeBtn" id="btnGallery">GALERÍA</button>
+        <button class="displayBlock orangeBtn" id="btnHistory">HISTORIA</button>
+        <button class="displayBlock orangeBtn" id="btnDatos">
+          DATOS CURIOSOS
+        </button>
+      </nav>
+      <div class="marginTopPet">
+        <img width="200px" src="img/vinicius.png" alt="imgVinicius" />
+      </div>
     </div>
     <article class="displayInlineBlock positionAbsolute customWidth">
-        <div class="displayBlock">
-          <main id="orangeContainer">
-          <nav id="navButton" class="displayInlineBlock separateFilterFromHeader" style="margin-left: 10px;">
+      <div class="displayBlock">
+        <main id="orangeContainer">
+          <nav
+            id="navButton"
+            class="displayInlineBlock separateFilterFromHeader"
+            style="margin-left: 10px"
+          >
             <select class="filterBtn" id="selectSport">
               <option selected="selected" value="" disabled>DEPORTES</option>
             </select>
@@ -41,45 +47,22 @@
             <select class="filterBtn" id="selectTeam">
               <option selected="selected" value="" disabled>EQUIPOS</option>
             </select>
-            <button class="filterBtn" onclick="clickSearch()" id="searchBtn">Buscar</button>
+            <button class="filterBtn" onclick="clickSearch()" id="searchBtn">
+              Buscar
+            </button>
           </nav>
-          </main>
-          <!-- <div class="ImgGallery btnCategories" style="background-color: #F4F3F2;">
+        </main>
+        <!-- <div class="ImgGallery btnCategories" style="background-color: #F4F3F2;">
             test
           </div> -->
-        </div>
-        <h2 id="emptyFilterMessage"></h2>
-        <div class="scrollBar">
-          <article id="newTable"> </article>
-        </div>
+      </div>
+      <h2 id="emptyFilterMessage"></h2>
+      <div class="scrollBar">
+        <article id="newTable"></article>
+      </div>
     </article>
     <div id="root"></div>
-    <footer>
-    </footer>
+    <footer></footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
