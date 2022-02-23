@@ -14,3 +14,4 @@ export default function generatorTable() {
             <tbody> </tbody>
           </table>`
 }
+

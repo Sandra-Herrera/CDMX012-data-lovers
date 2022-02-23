@@ -85,21 +85,26 @@ function clickSearch() {
     }
 
     if (filterData.length == 0) {
+        document.getElementById("scrollBar1").style.display = "none";
         document.getElementById("emptyFilterMessage").innerText = "No se encontró información de esta búsqueda";
+        document.getElementById("showTom").style.display="block";
         document.getElementById("tbOlimpics").style.display = "none";
     }
     else {
+        document.getElementById("scrollBar1").style.display = "block";
         document.getElementById("emptyFilterMessage").innerText = "";
         showTable();
+        document.getElementById("showTom").style.display = "none";
+       
     }
     generateTableContent(filterData);
     return chosenSport + chosenMedal + chosenGender + chosenTeam;
 }
 window.clickSearch = clickSearch;
 
-function showTable() {
-    article.innerHTML = generatorTable()
-}
+ function showTable() {
+     article.innerHTML = generatorTable()
+ }
 
 function generateTableContent(filterData) {
     let table = document.getElementById("tbOlimpics");
