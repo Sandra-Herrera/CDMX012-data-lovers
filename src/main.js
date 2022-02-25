@@ -1,6 +1,7 @@
-import { gender, medals, sports, team } from './data.js';
+import { gender, medals, sports, team, sortTableByColumn } from './data.js';
 import athletes from './data/athletes/athletes.js';
 import generatorTable from './utils/generatorTable.js'
+
 
 let article = document.getElementById("newTable");
 
@@ -98,6 +99,21 @@ function clickSearch() {
        
     }
     generateTableContent(filterData);
+
+    
+    document.querySelectorAll(".table-sortable th")
+    .forEach(headerCell => {
+
+        headerCell.addEventListener("click", () => {
+            const tableElement = document.getElementById("tbOlimpics");
+            const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
+            const currentIsAscending = headerCell.classList.contains("th-sort-asc");//este método valida el tipo de data en la columna que se pide ordenar
+
+            sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
+        });
+    
+    });
+    
     return chosenSport + chosenMedal + chosenGender + chosenTeam;
 }
 window.clickSearch = clickSearch;
@@ -107,7 +123,7 @@ window.clickSearch = clickSearch;
  }
 
 function generateTableContent(filterData) {
-    let table = document.getElementById("tbOlimpics");
+    let table = document.getElementById("tbOlimpics").getElementsByTagName('tbody')[0];
     filterData.forEach((athlete) => {
         let row = table.insertRow(-1);
         let cell1 = row.insertCell(0);
@@ -125,4 +141,9 @@ function generateTableContent(filterData) {
         cell6.innerHTML = athlete.weight;
         cell7.innerHTML = athlete.height;
     });
+
 }
+
+
+
+

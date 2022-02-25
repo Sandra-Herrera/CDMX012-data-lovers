@@ -1,15 +1,15 @@
 export default function generatorTable() {
-  return ` <table id="tbOlimpics">
+  return ` <table class="table-sortable" id="tbOlimpics">
             <thead>
               <tr class="thRio">
-                <td>DISCIPLINA</td>
-                <td>MEDALLA</td>
-                <td>ATLETA</td>
-                <td>GÉNERO</td>
-                <td>EDAD</td>
-                <td>PESO</td>
-                <td>ESTATURA</td>
-              </tr>
+                <th>DISCIPLINA</th>
+                <th>MEDALLA</th>
+                <th>ATLETA</th>
+                <th>GÉNERO</th>
+                <th>EDAD</th>
+                <th>PESO</th>
+                <th>ESTATURA</th>
+              </th>
             </thead>
             <tbody> </tbody>
           </table>`
