@@ -100,7 +100,16 @@ function clickSearch() {
         document.getElementById("showTom").style.display = "none";
        
     }
-    generateTableContent(filterData);
+    if(chosenSport || chosenGender || chosenMedal || chosenTeam){
+        generateTableContent(filterData);
+    }
+    else{
+        document.getElementById("scrollBar1").style.display = "none";
+        document.getElementById("containerCarrusel").style.display = "none";
+        document.getElementById("emptyFilterMessage").innerText = "No se encontró información de esta búsqueda";
+        document.getElementById("showTom").style.display="block";
+        document.getElementById("tbOlimpics").style.display = "none";
+    }
 
     
     document.querySelectorAll(".table-sortable th")
@@ -115,6 +124,7 @@ function clickSearch() {
         });
     
     });
+    
     
     return chosenSport + chosenMedal + chosenGender + chosenTeam;
 }
@@ -149,7 +159,7 @@ function generateTableContent(filterData) {
 //Tamaño de filtros en versión mobil
 function selectWhenMobile(width){
     let allSelects = document.getElementsByTagName('select');
-    if(width<586){
+    if(width<844){
         for(let select of allSelects){
             select.addEventListener('focus',()=>{select.size=4;});
             select.addEventListener('blur',()=>{select.size=0;});
@@ -160,6 +170,10 @@ function selectWhenMobile(width){
             select.addEventListener('focus',()=>{select.size=0;});
             select.addEventListener('blur',()=>{select.size=0;});
             select.addEventListener('change',()=>{select.size=0;select.blur();});
+            
+            var old_element = select;
+            var new_element = old_element.cloneNode(true);
+            old_element.parentNode.replaceChild(new_element, old_element);
         }
     }
 }

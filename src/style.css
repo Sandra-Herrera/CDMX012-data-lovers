@@ -99,11 +99,14 @@
 #logo{
     height: 87px;
 }
- 
+
+.centerTable{
+  width: 1050px;
+  display: flex;
+  justify-content: center;
+}
 table {
-  width: min-content;
   height: auto;
-  margin: 86px;
   margin-top: 30px;
   border-collapse: collapse;
   border: 1px solid #eee;
@@ -260,7 +263,6 @@ td {
   }
  
  
- 
 @media screen and (max-width: 844px) {
   /* .aside { flex: 1 0 0; } */
   .globalContainer {
@@ -323,7 +325,7 @@ td {
     display: flex;
     justify-content: center;
     background: none;
-    width: 100vw;
+    width: unset;
     height: unset;
     padding-top: unset;
     border-radius: unset;
@@ -374,12 +376,17 @@ td {
     max-height: 250px;
 }
 .scrollBar {
-  width: 975px;
+  width: unset;
   height: 400px;
   /* overflow: auto; */
 }
+.centerTable {
+  width: unset;
+  display: flex;
+  justify-content: center;
+}
 table {
-  width:25%;
+  /* width:25%; */
   display: flex;
   flex-direction: column;
   margin-bottom: 12em;;
