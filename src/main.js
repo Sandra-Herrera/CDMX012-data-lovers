@@ -87,7 +87,7 @@ function clickSearch() {
 
     if (filterData.length == 0) {
         document.getElementById("scrollBar1").style.display = "none";
-        document.getElementById("containerCarrusel").style.display = "none";
+        document.getElementById("containerCarrusel1").style.display = "none";
         document.getElementById("emptyFilterMessage").innerText = "No se encontró información de esta búsqueda";
         document.getElementById("showTom").style.display="block";
         document.getElementById("tbOlimpics").style.display = "none";
@@ -95,7 +95,7 @@ function clickSearch() {
     else {
         document.getElementById("scrollBar1").style.display = "block";
         document.getElementById("emptyFilterMessage").innerText = "";
-        document.getElementById("containerCarrusel").style.display = "none";
+        document.getElementById("containerCarrusel1").style.display = "none";
         showTable();
         document.getElementById("showTom").style.display = "none";
        
@@ -105,7 +105,7 @@ function clickSearch() {
     }
     else{
         document.getElementById("scrollBar1").style.display = "none";
-        document.getElementById("containerCarrusel").style.display = "none";
+        document.getElementById("containerCarrusel1").style.display = "none";
         document.getElementById("emptyFilterMessage").innerText = "No se encontró información de esta búsqueda";
         document.getElementById("showTom").style.display="block";
         document.getElementById("tbOlimpics").style.display = "none";
@@ -186,27 +186,36 @@ window.addEventListener("resize", function() {
 })
 
 //AQUI EMPIEZA EL CARRUSEL
-const picturesCarrousel = document.getElementById('picturesCarrousel');
-const punto = document.querySelectorAll('.punto')
+let arrayImgCarrousel = ['img/carrusel6.jpg', 'img/carrusel4.jpg', 'img/carrusel3.jpg', 'img/carrusel5.jpg', 'img/carrusel7.jpg', 'img/carrusel2.jpg', 'img/carrusel1.jpg'];
+let counter = 0;
 
-// Recorrer TODOS los punto
-punto.forEach( ( cadaPunto , i )=> {
-    
-// Asignamos un CLICK a cadaPunto
-punto[i].addEventListener('click',()=>{
+function carrousel(containerCarrusel){
+    containerCarrusel.addEventListener('click', event =>{
+        let previous = containerCarrusel.querySelector('.previous');
+        let next = containerCarrusel.querySelector('.next');
+        let image = containerCarrusel.querySelector('img');
+        let tgt = event.target;
 
-// Guardar la posición de ese PUNTO
-let posicion  = i
-//         // Calculando el espacio que debe DESPLAZARSE el GRANDE
-let operacion = posicion * -150;
-
-//         // MOVEMOS el grand
-picturesCarrousel.style.transform = `translateX(${ operacion }%)`
-
-//Recorremos TODOS los punto
-punto.forEach( ( cadaPunto , i )=>{
-//Quitamos la clase ACTIVO a TODOS los punto
-punto[i].classList.remove('activo')
-})
-})
+        if(tgt == previous){
+            if(counter > 0){
+                image.src = arrayImgCarrousel[counter-1];
+                counter--;
+            }else{
+                image.src = arrayImgCarrousel[arrayImgCarrousel.length - 1];
+                counter = arrayImgCarrousel.length - 1;
+            }
+        } else if(tgt == next){
+            if(counter < arrayImgCarrousel.length - 1){
+                image.src = arrayImgCarrousel[counter+1];
+                counter++;
+            }else{
+                image.src = arrayImgCarrousel[0];
+                counter = 0;
+            }
+        }
+    })
+}
+document.addEventListener("DOMContentLoaded", () => {
+    let container = document.querySelector('.containerCarrusel')
+    carrousel(container);
 })

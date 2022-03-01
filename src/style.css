@@ -199,7 +199,7 @@ td {
   }
  
   /*AQUI EMPIEZA EL CARRUSEL*/
-  .carrousel {
+  /* .carrousel {
     width: 90%;
     max-width: 120em;
     padding: 2em;
@@ -260,6 +260,53 @@ td {
  
   .carrousel .punto.activo {
     background-color: lightblue;
+  } */
+
+  .imgCarrousel{
+    display: flex;
+    width: 40%;
+    height: 40%;
+    margin-top: 5%;
+    margin-left: 300px;
+  } 
+
+  .containerCarrusel {
+    width: 100%;
+    position: relative;
+    height: 780px;
+  }
+
+  .image{
+    margin-top: -202px;
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.7);
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255,255,255,.6);
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+
+  .image:hover{
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+  } 
+
+ .previous{
+    left: 14%;
+    top: calc(50% - 70px);
+  }
+
+  .next{
+    right: 26%;
+    top: calc(50% - 70px);
   }
  
  
@@ -430,4 +477,36 @@ td:nth-of-type(4):before { content: "GÉNERO"; font-weight:bold; color: #f6791e;
 td:nth-of-type(5):before { content: "EDAD"; font-weight:bold; color: #f6791e;}
 td:nth-of-type(6):before { content: "PESO"; font-weight:bold; color: #f6791e;}
 td:nth-of-type(7):before { content: "ESTATURA"; font-weight:bold; color: #f6791e;}
+
+/*Aquí inicia el carrusel*/
+.imgCarrousel {
+  display: flex;
+  width: 86%;
+  height: 35%;
+  margin-top: 5%;
+  margin-left: 23px;
+}
+
+.image {
+  margin-top: -37px;
+  font-size: 30px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.7);
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  color: #fff;
+  box-shadow: 0 0 10px rgb(255 255 255 / 60%);
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.previous {
+  left: 23%;
+  top: calc(50% - 70px);
+}
 }
