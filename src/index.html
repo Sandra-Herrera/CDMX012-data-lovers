@@ -29,6 +29,10 @@
       </div>
     </div>
     <article class="displayInlineBlock positionAbsolute customWidth">
+      <section class="headerMobile">
+        <img src="./img/logo2016.png" class="imgLogo"/>
+        <div>MiniMenu</div>
+      </section>
       <div class="displayBlock">
         <main id="orangeContainer">
           <nav
@@ -47,12 +51,29 @@
             <select class="filterBtn" id="selectTeam">
               <option selected="selected" value="" disabled class="hola">EQUIPOS</option>
             </select>
-            <button class="filterBtn" onclick="clickSearch()" id="searchBtn">
-              Buscar
-            </button>
+            <button class="filterBtn" onclick="clickSearch()" id="searchBtn">Buscar</button>
           </nav>
         </main>
       </div>
+      <!--Div que guarda al carrousel de fotos-->
+       <div id="containerCarrusel">
+      <div class="carrousel">
+      <div id="picturesCarrousel">
+        <img src="img/carrusel3.jpg"  alt="Imagen 4" class="imgCarrousel">
+        <img src="img/carrusel4.jpg"  alt="Imagen 6" class="imgCarrousel">
+        <img src="img/carrusel6.jpg"  alt="Imagen 2" class="imgCarrousel">
+          <img src="img/carrusel5.jpg"  alt="Imagen 3" class="imgCarrousel">
+          <img src="img/carrusel7.jpg"  alt="Imagen 5" class="imgCarrousel">
+          <img src="img/carrusel2.jpg"  alt="Imagen 7" class="imgCarrousel">
+          <img src="img/carrusel1.jpg"  alt="Imagen 1" class="imgCarrousel">
+      </div>
+      <ul id="directionsCarrousel">
+          <li class="punto activo"></li>
+          <li class="punto"></li>
+      </ul>
+  </div>
+</div> 
+
       <div class="scrollBar" id="scrollBar1">
         <article  id="newTable"></article>
       </div>
