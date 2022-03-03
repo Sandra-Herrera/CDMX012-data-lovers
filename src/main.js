@@ -2,7 +2,6 @@ import { gender, medals, sports, team, sortTableByColumn } from './data.js';
 import athletes from './data/athletes/athletes.js';
 import generatorTable from './utils/generatorTable.js'
 
-
 let article = document.getElementById("newTable");
 
 // Desplegar filtro de deportes
