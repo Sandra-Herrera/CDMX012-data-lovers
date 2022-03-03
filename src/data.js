@@ -1,10 +1,8 @@
-// estas funciones son de ejemplo
-
 import data from './data/athletes/athletes.js';
 
-export const Athletes = () => {
-  return data;
-};
+// export const Athletes = () => {
+//   return data;
+// };
 
 // Traer set de datos de Deportes
 export const sports = () => {
@@ -54,7 +52,6 @@ export const team = () => {
   return eraseDuplicate4;
 }
 
-
 //tabla es nuestra tabla, column es la posición de la columna, y boolean 
  export const sortTableByColumn = (table, column, asc = true) => {
   const dirModifier = asc ? 1 : -1;
@@ -65,7 +62,7 @@ export const team = () => {
   const sortedRows = rows.sort((a, b) => {//Selector que permite seleccionar uno o mas elementos en funcion de su orden original de acuerdo con una formula
     const aColText = a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
     const bColText = b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
-      return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);//explicar plis
+      return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
   });
  
   // remover la tabla existente

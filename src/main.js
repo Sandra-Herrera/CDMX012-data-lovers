@@ -2,7 +2,6 @@ import { gender, medals, sports, team, sortTableByColumn } from './data.js';
 import athletes from './data/athletes/athletes.js';
 import generatorTable from './utils/generatorTable.js'
 
-
 let article = document.getElementById("newTable");
 
 // Desplegar filtro de deportes
@@ -87,6 +86,7 @@ function clickSearch() {
 
     if (filterData.length == 0) {
         document.getElementById("scrollBar1").style.display = "none";
+        document.getElementById("containerCarrusel1").style.display = "none";
         document.getElementById("emptyFilterMessage").innerText = "No se encontró información de esta búsqueda";
         document.getElementById("showTom").style.display="block";
         document.getElementById("tbOlimpics").style.display = "none";
@@ -94,11 +94,21 @@ function clickSearch() {
     else {
         document.getElementById("scrollBar1").style.display = "block";
         document.getElementById("emptyFilterMessage").innerText = "";
+        document.getElementById("containerCarrusel1").style.display = "none";
         showTable();
         document.getElementById("showTom").style.display = "none";
        
     }
-    generateTableContent(filterData);
+    if(chosenSport || chosenGender || chosenMedal || chosenTeam){
+        generateTableContent(filterData);
+    }
+    else{
+        document.getElementById("scrollBar1").style.display = "none";
+        document.getElementById("containerCarrusel1").style.display = "none";
+        document.getElementById("emptyFilterMessage").innerText = "No se encontró información de esta búsqueda";
+        document.getElementById("showTom").style.display="block";
+        document.getElementById("tbOlimpics").style.display = "none";
+    }
 
     
     document.querySelectorAll(".table-sortable th")
@@ -113,6 +123,7 @@ function clickSearch() {
         });
     
     });
+    
     
     return chosenSport + chosenMedal + chosenGender + chosenTeam;
 }
@@ -144,6 +155,66 @@ function generateTableContent(filterData) {
 
 }
 
+//Tamaño de filtros en versión mobil
+function selectWhenMobile(width){
+    let allSelects = document.getElementsByTagName('select');
+    if(width<844){
+        for(let select of allSelects){
+            select.addEventListener('focus',()=>{select.size=4;});
+            select.addEventListener('blur',()=>{select.size=0;});
+            select.addEventListener('change',()=>{select.size=0;select.blur();});
+        }
+    }else{
+        for(let select of allSelects){
+            select.addEventListener('focus',()=>{select.size=0;});
+            select.addEventListener('blur',()=>{select.size=0;});
+            select.addEventListener('change',()=>{select.size=0;select.blur();});
+            
+            var old_element = select;
+            var new_element = old_element.cloneNode(true);
+            old_element.parentNode.replaceChild(new_element, old_element);
+        }
+    }
+}
+ 
+selectWhenMobile(document.documentElement.clientWidth);
+ 
+window.addEventListener("resize", function() {
 
+    window.onresize = selectWhenMobile(document.documentElement.clientWidth);
+})
 
+//AQUI EMPIEZA EL CARRUSEL
+let arrayImgCarrousel = ['img/carrusel6.jpg', 'img/carrusel4.jpg', 'img/carrusel3.jpg', 'img/carrusel5.jpg', 'img/carrusel7.jpg', 'img/carrusel2.jpg', 'img/carrusel1.jpg'];
+let counter = 0;
 
+function carrousel(containerCarrusel){
+    containerCarrusel.addEventListener('click', event =>{
+        let previous = containerCarrusel.querySelector('.previous');
+        let next = containerCarrusel.querySelector('.next');
+        let image = containerCarrusel.querySelector('img');
+        let tgt = event.target;
+
+        if(tgt == previous){
+            if(counter > 0){
+                image.src = arrayImgCarrousel[counter-1];
+                counter--;
+            }else{
+                image.src = arrayImgCarrousel[arrayImgCarrousel.length - 1];
+                counter = arrayImgCarrousel.length - 1;
+            }
+        } else if(tgt == next){
+            if(counter < arrayImgCarrousel.length - 1){
+                image.src = arrayImgCarrousel[counter+1];
+                counter++;
+            }else{
+                image.src = arrayImgCarrousel[0];
+                counter = 0;
+            }
+        }
+    })
+}
+document.addEventListener("DOMContentLoaded", () => {
+    let container = document.querySelector('.containerCarrusel')
+    carrousel(container);
+})
