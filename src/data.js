@@ -1,8 +1,8 @@
 import data from './data/athletes/athletes.js';
 
-export const Athletes = () => {
-  return data;
-};
+// export const Athletes = () => {
+//   return data;
+// };
 
 // Traer set de datos de Deportes
 export const sports = () => {
