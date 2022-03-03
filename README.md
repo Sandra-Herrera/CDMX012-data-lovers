@@ -21,33 +21,33 @@ Este proyecto fue pensado para amantes de los juegos olimpicos y los deportes, p
 
 Para lograr tener un contenido relevante para nuestros usuarios, nos dimos a la tarea de investigar acerca de sus intereses y opiniones, para esto desarrollamos un cuestionario que nos dio la posibilidad de conocer qué le gustaría ver en nuestra interfaz y qué información es importante para ella/él. A continuación mostramos los resultados obtenidos del cuestionario:
 
-* ![Cuestionario](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Cuestionario.JPG)
+![Cuestionario](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Cuestionario.JPG)
 
 Una vez obtenida la opinión de nuestros usuarios a través del cuestionario y después de realizar una investigación en la web sobre ella/él, diseñamos un User Persona que representa a nuestro usuario principal y donde plasmamos las motivaciones, comportamientos, frustraciones y necesidades que tiene, a continuación el User Persona:
 
-* ![User persona](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/User%20persona.png)
+![User persona](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/User%20persona.png)
 
 ## 3. Diseño de la Interfaz de Usuario
 
 Para iniciar el diseño de nuestro prototipo, hicimos un benchmarking de otras paginas web con contenidos similares, esto nos dio ideas sobre elementos que podiamos incorporar o no tener en cuenta en nuestra pagina con la finalidad de ofrecer la mejor experiencia de usuario posible, aquí una muestra de algunas de las paginas que visitamos:
 
-* ![Benchmarking](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/main/src/img/Benchmarking.JPG)
+![Benchmarking](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/main/src/img/Benchmarking.JPG)
 
 Ya conociendo a nuestro olympics lover, pudimos diseñar un prototipo de la interfaz de Usuario que se adaptara a sus gustos y necesidades, para llegar al prototipo final, realizamos tests de usabilidad con distintos usuarios, y con base en los resultados iteramos nuestros diseños.
 
 A continuación podrás ver el primer diseño que iteramos con nuestros usuarios:
 
-* ![Primer prototipo](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Primer%20prototipo.png)
+![Primer prototipo](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Primer%20prototipo.png)
 
 El feedback que obtuvimos de este primer prototipo, nos mostró que a nuestro usuario se le hacia molesto tener un modal de bienvenida que tuviera que cerrar para poder acceder a la vista principal y a la información, además consideraron que era una interfaz simple y que preferian una vista más colorida que los hiciera pensar en Brasil y en Río de Janeiro. con estas consideraciones, diseñamos nuestro segundo prototipo, que podrás ver a continuación:
 
-* ![Prototipo final](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Prototipo%20final.png)
+![Prototipo final](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Prototipo%20final.png)
 
 Este segundo prototipo tuvo aceptación por parte de nuestros usuarios, lo consideraron limpio, intuitivo y facil de usar, por lo que se convirtió en el prototipo final.
 
 Además de este diseño, realizamos un diseño para móbil:
 
-* ![Prototipo móbil](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Prototipo%20M%C3%B3bil.png)
+![Prototipo móbil](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Prototipo%20M%C3%B3bil.png)
 
 ## 4. Historias de usuario
 
@@ -66,12 +66,14 @@ Todo lo anterior dio como resultado nuestra interfaz en desktop y en móbil:
 
 * Interfaz en desktop
 
-- ![Vista desktop 1](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Interfaz%20principal%20en%20desktop.png)
+![Vista desktop 1](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Interfaz%20principal%20en%20desktop.png)
 
-- ![Vista desktop 2](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Interfaz%20con%20tabla%20en%20desktop.png)
 
-- ![Vista desktop 3](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Interfaz%20sin%20info%20en%20desktop.png)
+![Vista desktop 2](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Interfaz%20con%20tabla%20en%20desktop.png)
+
+
+![Vista desktop 3](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Interfaz%20sin%20info%20en%20desktop.png)
 
 * Interfaz en desktop
 
-- ![Vista móbil](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Interfaz%20en%20m%C3%B3bil.png)
+![Vista móbil](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Interfaz%20en%20m%C3%B3bil.png)
