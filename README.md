@@ -74,6 +74,6 @@ Todo lo anterior dio como resultado nuestra interfaz en desktop y en móbil:
 
 ![Vista desktop 3](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Interfaz%20sin%20info%20en%20desktop.png)
 
-* Interfaz en desktop
+* Interfaz en móbil
 
 ![Vista móbil](https://raw.githubusercontent.com/Melissa-Bracamonte/CDMX012-data-lovers/ordenamiento-de-tabla/src/img/Interfaz%20en%20m%C3%B3bil.png)
