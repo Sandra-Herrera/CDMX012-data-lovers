@@ -1,8 +1,5 @@
 import data from './data/athletes/athletes.js';
 
-// export const Athletes = () => {
-//   return data;
-// };
 
 // Traer set de datos de Deportes
 export const sports = () => {
@@ -60,7 +57,7 @@ export const team = () => {
 
   // ordenar por cada fila
   const sortedRows = rows.sort((a, b) => {//Selector que permite seleccionar uno o mas elementos en funcion de su orden original de acuerdo con una formula
-    const aColText = a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+    const aColText = a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim(); //hijo clickeado 
     const bColText = b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
       return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
   });
@@ -73,7 +70,7 @@ export const team = () => {
   tBody.append(...sortedRows);
 
   // recuerda como estaba ordenada la columna 
-  table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc"));
-  table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-asc", asc);
+  table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc")); //borrar flechas
+  table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-asc", asc); //agrega flechita asc
   table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-desc", !asc);
 }

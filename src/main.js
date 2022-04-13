@@ -111,13 +111,13 @@ function clickSearch() {
     }
 
     
-    document.querySelectorAll(".table-sortable th")
+    document.querySelectorAll(".table-sortable th") 
     .forEach(headerCell => {
 
         headerCell.addEventListener("click", () => {
             const tableElement = document.getElementById("tbOlimpics");
-            const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
-            const currentIsAscending = headerCell.classList.contains("th-sort-asc");//este método valida el tipo de data en la columna que se pide ordenar
+            const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell); //determina la columna que se hizo click
+            const currentIsAscending = headerCell.classList.contains("th-sort-asc");//determina si ya esta ordenada en asc o des
 
             sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
         });
@@ -170,8 +170,8 @@ function selectWhenMobile(width){
             select.addEventListener('blur',()=>{select.size=0;});
             select.addEventListener('change',()=>{select.size=0;select.blur();});
             
-            var old_element = select;
-            var new_element = old_element.cloneNode(true);
+            let old_element = select;
+            let new_element = old_element.cloneNode(true);
             old_element.parentNode.replaceChild(new_element, old_element);
         }
     }
@@ -193,7 +193,7 @@ function carrousel(containerCarrusel){
         let previous = containerCarrusel.querySelector('.previous');
         let next = containerCarrusel.querySelector('.next');
         let image = containerCarrusel.querySelector('img');
-        let tgt = event.target;
+        let tgt = event.target;//determina quien se presiono
 
         if(tgt == previous){
             if(counter > 0){
@@ -214,7 +214,7 @@ function carrousel(containerCarrusel){
         }
     })
 }
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {//cargar carrusel en pagina
     let container = document.querySelector('.containerCarrusel')
     carrousel(container);
 })
